@@ -1,0 +1,25 @@
+.spinner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #d30a0a;
+    animation: spin 1s ease-in-out infinite;
+    margin: auto;
+    margin-top: 100px;
+  }
+.text{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 50px;
+  color: #d30a0a;
+}
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,32 @@
+.ProductName-input{
+    width: 250px;
+    border-radius: 12px;
+    text-align: center;
+    margin-left: 10px;
+}
+.top-bottom{
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+.mar-auto{
+  width: 300px;
+  margin: 10px auto;
+}
+.cartItem-name{
+  text-align: center;
+    font-size: 22px;
+}
+.cartItem-rating{
+  display: flex;
+  justify-content: center;
+}
+.cartItem-offerPrice{
+  margin-right: 50px;
+    font-size: 22px;
+    color: black;
+}
+.cartItem-price{
+  color: red;
+  font-size: 22px;
+  text-decoration: line-through;
+}

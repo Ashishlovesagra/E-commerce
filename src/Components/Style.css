@@ -1,0 +1,123 @@
+.nav-title-1 {
+  width: 9px;
+  height: 51px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal normal 36px/67px Poppins;
+  letter-spacing: 0.22px;
+  color: #ff4252;
+}
+.nav-title-2 {
+  width: 99px;
+  height: 51px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal 600 36px/67px Poppins;
+  letter-spacing: 0.22px;
+  color: #ff4252;
+  text-transform: uppercase;
+}
+.nav-div1 {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+}
+.nav-div2 {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  margin-right: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-div3 {
+  min-width: 100px;
+  display: flex;
+  height: 32px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-div4 {
+  width: 75px;
+  display: flex;
+  flex-direction: row;
+}
+.nav-div5 {
+  width: 150px;
+}
+.nav-search-box{
+    width: 70%;
+    height: 30px;
+    text-align: center;
+}
+.nav-search-btn{
+    height: 30px;
+    width: 30px;
+    color: black;
+}
+.nav-search-img{
+    width: 20px;
+    height: 20px;
+    margin-top: -12px;
+    margin-left: -7px;
+}
+.nav-profile-text {
+  min-width: 80px;
+  margin-top: 7px;
+  margin-left: 10px;
+  text-align: left;
+  font: normal normal 600 14px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  opacity: 1;
+}
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+.nav-item {
+  margin-right: 50px;
+}
+.nav-link:hover {
+  color: rgb(23, 140, 237);
+}
+.nav-link {
+  text-align: center;
+  font: normal normal 600 24px Proxima Nova;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  color: #22262a;
+}
+.draplink{
+    font: normal normal 600 14px Proxima Nova;
+    letter-spacing: 0.35px;
+    color: #262626;
+    opacity: 1;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-div2 {
+    width: 70%;
+    margin-right: 0%;
+  }
+  .nav-div1 {
+    width: 22%;
+    margin-left: 0%;
+  }
+  .nav-div3 {
+    min-width: 80px;
+  }
+  .nav-search-img {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    top: 0px;
+    left: -12px;
+}
+}
+

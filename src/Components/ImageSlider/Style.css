@@ -1,0 +1,18 @@
+.homeImageSlider{
+    width: 99.8%;
+    height: 500px;
+    margin-top: 20px;
+    border: 2px solid black;
+    background: transparent linear-gradient(67deg, #E71D3A 0%, #ECC7C1 45%, #EFCAC4 58%, #E4BDB8 70%, #42A8FE 100%) 0% 0% no-repeat padding-box;
+}
+.sliderImages{
+    height: 497px;
+}
+@media screen and (max-width: 768px) {
+    .sliderImages{
+        height: 180px;
+    }
+    .homeImageSlider{
+        height: 183px;
+    }
+}
