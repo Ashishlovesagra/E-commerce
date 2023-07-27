@@ -48,12 +48,12 @@ const Profile = () => {
   };
   return (
     <>
-      <div className="container">
-        <div className="col-md-4">
+      <div className="container-fluid m-3 p-3">
+        <div className="row">
+        <div className="col-md-3">
           <UserMenu />
         </div>
-        <div className="col-md-1"></div>
-        <div className="col-md-6">
+        <div className="col-md-9">
           <div className="register-form" style={{ marginTop: "0px" }}>
             <h2>UPDATE PROFILE</h2>
             <form onSubmit={handleSubmit}>
@@ -119,6 +119,7 @@ const Profile = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

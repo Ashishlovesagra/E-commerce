@@ -37,52 +37,47 @@ function CartPage() {
             console.log(error)
         }
     }
+
+    //place order
+    const handlePlaceOrder = () =>{
+        navigate('/');
+        removeCartItem();
+    }
   return (
-    <div className='container flex-column'>
-        {/* <div className="cart-text-container">
-            <h4>{`Hello ${auth?.token && auth?.user?.name}`}</h4>
-        </div> */}
-        {/* <div className="cart-text-container">
-            <h4>{cart?.length > 1 ? `You have ${cart.length} item in your Cart ${auth?.token ? " " : "Please login to Checkout"}` : "Your cart is Empty"}</h4>
-        </div> */}
-        <div className="cart-text-container">
-        <h4>Cart</h4>
+    <div className='cart-page'>
+        <div className="row">
+            <div className="col-md-12">
+                <h1 className="text-center bg-light p-2 mb-1">
+                    {`hello ${auth?.token && auth?.user?.name}`}
+                </h1>
+                <h4 className="text-center">
+                    {cart?.length > 1 ? `You have ${cart.length} items in ypur cart ${auth?.token ? " " : " Please login to checkout"}` : "Your Cart is Empty"}
+                </h4>
+            </div>
         </div>
-        <div className="row display-none">
-            <div className="col-md-6">
-                <h2>PRODUCTS</h2>
-            </div>
-            <div className="col-md-6">
-            <div className="cart-right-heading">
-                        <h2>PRICE</h2>
-                        <h2>QTY</h2>
-                        <h2>UNIT PRICE</h2>
-                    </div>
-            </div>
-        </div>  
+        <div className="row">
+            <div className="col-md-12">
             {cart?.map((p)=>(
                     <div className="row">
-                    <div className="col-md-6">
-                    <div className="cart-item-box" >
+                    <div className="container" >
                         <div className="cart-delete-btn close" onClick={()=>removeCartItem(p._id)}>&times;</div>
                         <img className="cart-image-box" src={p.image} alt="" />
                         <div className="cart-product-name-box">{p.name}</div>
-                    </div>
-                    </div>
-                    <div className="col-md-6">
-                    <div className="cart-right-box">
                         <div className="cart-priceBox">₹</div>
                         <div className="cart-qty-box"></div>
                         <div className="cart-perItem-priceBox">₹{p.price}</div>
-                    </div> 
                 </div>
                 </div>
                 ))
             }
-            <div className="row">
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-md-12">
                 <div className="row">
-                    <div className="col-md-6">
-                        <div className="coupon-mainBox">
+                    <div className="col-md-2"></div>
+                    <div className="col-md-4">
+                    <div className="coupon-mainBox">
                             <div className="coupon-inputBox">
                                 <input type="text" placeholder='Voucher code' className='couponInput'/>
                             </div>
@@ -108,8 +103,8 @@ function CartPage() {
                             )}
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <div className="text-flex-box">
+                    <div className="col-md-4">
+                    <div className="text-flex-box">
                             <div className="flex-box-left">Subtotal</div>
                             <div className="flex-box-right">{totalPrice()}</div>
                         </div>
@@ -125,10 +120,11 @@ function CartPage() {
                             <div className="flex-box-left final-left">TOTAL</div>
                             <div className="flex-box-right final-right">{totalPrice()}</div>
                         </div>
-                        <button type="submit" className='payment-total-btn'>Check out</button>
+                        <button type="submit" onClick={handlePlaceOrder} className='payment-total-btn'>Place Order</button>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
   )
 }

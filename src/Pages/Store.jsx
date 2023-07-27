@@ -114,10 +114,11 @@ function Store() {
   };
   return (
     <>
-      <div className="container d-flex">
+      <div className="row" >
         <div className="col-md-3">
-          <h1>Filter By Category</h1>
-          <div className="container d-flex flex-column">
+          <h1 className="text-center mt-5">Filter By Category</h1>
+          <div className="d-flex flex-column">
+          <div className="row" style={{marginLeft:"10%"}}>
             {category?.map((c) => (
               <Checkbox
                 key={c._id}
@@ -127,8 +128,10 @@ function Store() {
               </Checkbox>
             ))}
           </div>
-          <h1 className="TextMiddle">Filter By Prices</h1>
-          <div className="container d-flex flex-column">
+          </div>
+          <h3 className="text-center mt-4">Filter By Prices</h3>
+          <div className="d-flex flex-column">
+          <div className="row" style={{marginLeft:"10%"}}>
             <Radio.Group onChange={(e) => setRadio(e.target.value)}>
               {prices.map((p) => (
                 <div key={p._id}>
@@ -136,17 +139,18 @@ function Store() {
                 </div>
               ))}
             </Radio.Group>
+            </div>
           </div>
           <button
-            className="FilterResetBtn"
+            className="btn btn-primary mt-4"
             onClick={() => window.location.reload()}
           >
             Reset Filters
           </button>
         </div>
         <div className="col-md-9">
-          <h1>All Products</h1>
-          <div className="col-md-12 d-flex flex-wrap">
+          <h1 className="text-center">All Products</h1>
+          <div className="d-flex flex-wrap" style={{justifyContent:"center"}}>
             {product.map((prod) => (
               <div className="ProductCart" key={prod._id}>
                 <img
@@ -177,10 +181,10 @@ function Store() {
               </div>
             ))}
           </div>
-          <div className="container">
+          <div className="row mt-4" style={{width:"100%"}}>
             {product && product.length < total && (
               <button
-                className="loadingBtn"
+                className="btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();
                   setPage(page + 1);

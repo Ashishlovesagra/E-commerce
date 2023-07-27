@@ -110,21 +110,22 @@ const UpdateProduct = () => {
   };
   return (
     <>
-      <div className="container">
-        <div className="col-md-4">
+      <div className="container-fluid m-3 p-3">
+        <div className="row">
+        <div className="col-md-3">
           <AdminMenu />
         </div>
-        <div className="col-md-6">
-          <h1 style={{ textAlign: "center", fontSize: "22px" }}>
+        <div className="col-md-9">
+          <div className="m-1 w-75">
+          <h1 style={{ fontSize: "32px"}}>
             Update Product
           </h1>
-          <div className="row">
             <Select
               bordered={false}
               placeholder="Select a Category"
               size="large"
               showSearch
-              className="container top-bottom"
+              className="form-select mb-3"
               onChange={(value) => {
                 setCategory(value);
               }}
@@ -136,7 +137,7 @@ const UpdateProduct = () => {
                 </Option>
               ))}
             </Select>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <label htmlFor="name" style={{ fontSize: "18px" }}>
                 Product Name:-{" "}
               </label>
@@ -144,11 +145,11 @@ const UpdateProduct = () => {
                 type="text"
                 value={name}
                 placeholder="Write Product Name"
-                className="ProductName-input"
+                className="form-control"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <label htmlFor="name" style={{ fontSize: "18px" }}>
                 Product Image Url:-{" "}
               </label>
@@ -156,11 +157,11 @@ const UpdateProduct = () => {
                 type="text"
                 value={image}
                 placeholder="Image Url"
-                className="ProductName-input"
+                className="form-control"
                 onChange={(e) => setImage(e.target.value)}
               />
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <label htmlFor="name" style={{ fontSize: "18px" }}>
                 Product Price:-{" "}
               </label>
@@ -168,11 +169,11 @@ const UpdateProduct = () => {
                 type="text"
                 value={price}
                 placeholder="Write Product Price"
-                className="ProductName-input"
+                className="form-control"
                 onChange={(e) => setPrice(e.target.value)}
               />
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <label htmlFor="name" style={{ fontSize: "18px" }}>
                 Product Original Price:-{" "}
               </label>
@@ -180,11 +181,11 @@ const UpdateProduct = () => {
                 type="text"
                 value={oPrice}
                 placeholder="Write Product Original Price"
-                className="ProductName-input"
+                className="form-control"
                 onChange={(e) => setOprice(e.target.value)}
               />
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <label htmlFor="name" style={{ fontSize: "18px" }}>
                 Product Ratting Url:-{" "}
               </label>
@@ -192,11 +193,11 @@ const UpdateProduct = () => {
                 type="text"
                 value={rating}
                 placeholder="Write Product Ratting Url"
-                className="ProductName-input"
+                className="form-control"
                 onChange={(e) => setRating(e.target.value)}
               />
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <label htmlFor="name" style={{ fontSize: "18px" }}>
                 Product Quantity:-{" "}
               </label>
@@ -208,7 +209,7 @@ const UpdateProduct = () => {
                 onChange={(e) => setQuantity(e.target.value)}
               />
             </div>
-            <div className="mar-auto">
+            <div className="mb-3">
               <Select
                 bordered={false}
                 placeholder="Select Shipping "
@@ -224,17 +225,18 @@ const UpdateProduct = () => {
                 <Option value="1">Yes</Option>
               </Select>
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <button className="btn btn-success" onClick={handleUpdate}>
                 UPDATE PRODUCT
               </button>
             </div>
-            <div className="container top-bottom">
+            <div className="mb-3">
               <button className="btn btn-danger" onClick={handleDelete}>
                 DELETE PRODUCT
               </button>
             </div>
-          </div>
+            </div>
+        </div>
         </div>
       </div>
     </>

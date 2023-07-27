@@ -127,7 +127,6 @@
 }
 .btn {
   width: 60%;
-  font-size: 22px;
   text-align: center;
   border-radius: 20px;
   margin-left: 20%;
@@ -194,9 +193,13 @@
   left: 60px;
   height: 500px;
 }
+
 .containerH1 {
-  width: 300px;
-  margin: 10px;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 10px;
 }
 .h1-imageBox {
   width: 70px;
@@ -211,7 +214,7 @@
   opacity: 1;
 }
 .h1-paraBox {
-  width: 300px;
+  width: 270px;
   height: 102px;
   margin-top: 50px;
   text-align: center;
@@ -220,12 +223,69 @@
   color: #5b5f64;
   opacity: 1;
 }
+.home-custom1{
+  width: 100%;
+  height: 600px;
+  margin-top: 140px;
+}
 @media screen and (max-width: 768px) {
   .container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .box{
+  .box {
     flex-direction: column;
   }
+  .home-img-extra {
+    position: relative;
+    top: -120px;
+    left: 51px;
+    height: 320px;
+}
+.home-div2 h1 {
+  font-size: 42px;
+}
+.home-div2 h2 {
+  width: 250px;
+  height: 72px;
+  margin-left: 20%;
+  text-align: left;
+  font: normal normal normal 24px Poppins;
+}
+.home-div2 {
+  width: 70%;
+  height: 318px;
+}
+.home-div3 {
+  width: 44%;
+  height: 220px;
+}
+.home-custom1{
+  width: 100%;
+  height: 600px;
+  margin-top: 40px;
+}
+.h1-paraBox {
+  width: 270px;
+  height: 102px;
+  margin-top: 20px;
+  text-align: center;
+  font: normal normal normal 14px/24px Proxima Nova;
+  letter-spacing: 0px;
+  color: #5b5f64;
+  opacity: 1;
+}
+}
+
+/* New CSS */
+.home-text-box {
+  border: 1px solid black;
+  width: 393px;
+  height: 264px;
+  opacity: 1;
+}
+.home-brand-image-box {
+  border: 1px solid black;
+  width: 649px;
+  height: 703px;
 }

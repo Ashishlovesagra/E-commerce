@@ -7,11 +7,11 @@ const AdminMenu = () => {
     <>
       <div className="text-center">
         <div className="list-group">
-            <h4>Admin Panel</h4>
-            <Link style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/create-category">Create Category</Link>
-            <Link style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/create-product">Create Product</Link>
-            <Link style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/products">Product</Link>
-            <Link style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/users">Users</Link>
+            <h4 style={{fontSize:"32px"}}>Admin Panel</h4>
+            <Link className='list-group-item list-group-item-action' style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/create-category">Create Category</Link>
+            <Link className='list-group-item list-group-item-action' style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/create-product">Create Product</Link>
+            <Link className='list-group-item list-group-item-action' style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/products">Product</Link>
+            <Link className='list-group-item list-group-item-action' style={{fontSize:"25px",textDecoration:"none"}} to="/dashboard/admin/users">Users</Link>
         </div>
       </div>
     </>

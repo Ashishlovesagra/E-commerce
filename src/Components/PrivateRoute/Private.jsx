@@ -10,7 +10,7 @@ export default function PrivateRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("http://127.0.0.1:1009/api/v1/auth/user-auth");
+      const res = await axios.get("https://e-commerce-backend-chi.vercel.app/api/v1/auth/user-auth");
       if (res.data.ok) {
         setOk(true);
       } else {

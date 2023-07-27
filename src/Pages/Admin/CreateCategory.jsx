@@ -96,23 +96,26 @@ const CreateCategory = () => {
   };
   return (
     <>
-      <div className="container">
-        <div className="col-md-4">
+      <div className="container-fluid m-3 p-3">
+        <div className="row">
+        <div className="col-md-3">
           <AdminMenu />
         </div>
-        <div className="col-md-6">
-          <h1 style={{ textAlign: "center", fontSize: "22px" }}>
+        <div className="col-md-9">
+          <div className="w-75">
+          <h1 style={{fontSize: "36px" }}>
             Manage category
           </h1>
-          <div className="container">
+          <div className="container w-75">
             <CategoryForm
               handleSubmit={handleSubmit}
               value={name}
               setValue={setName}
             />
           </div>
-          <div className="container">
-            <table style={{ width: "90%" }}>
+          </div>
+          <div className="w-75">
+            <table className="table">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -167,6 +170,7 @@ const CreateCategory = () => {
               handleSubmit={handleUpdate}
             />
           </Modal>
+        </div>
         </div>
       </div>
     </>

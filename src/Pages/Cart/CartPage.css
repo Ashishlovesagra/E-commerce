@@ -91,8 +91,10 @@
   justify-content: space-between;
 }
 .cart-priceBox {
-  width: 39px;
+  width: 60px;
   height: 20px;
+  margin-top: 40px;
+  margin-right: 20px;
   text-align: left;
   margin-left: 10px;
   font: normal normal normal 16px/28px Proxima Nova;
@@ -103,15 +105,17 @@
 .cart-qty-box {
   width: 116px;
   height: 46px;
+  margin-top: 30px;
   background: #f6f7f8 0% 0% no-repeat padding-box;
   border-radius: 4px;
   opacity: 1;
 }
 .cart-perItem-priceBox {
-  width: 39px;
-  height: 20px;
-  text-align: left;
-  margin-right: 30px;
+  width: 60px;
+    margin-top: 40px;
+    height: 20px;
+    margin-left: 40px;
+    text-align: left;
   font: normal normal normal 16px/28px Proxima Nova;
   letter-spacing: 0.4px;
   color: #262626;
@@ -229,6 +233,12 @@
 @media screen and (max-width: 768px) {
   .display-none{
     display: none;
+  }
+  .cart-product-name-box {
+    width: 370px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
 }

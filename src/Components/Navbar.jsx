@@ -71,7 +71,7 @@ function Navbar() {
             ) : (
               <>
                 <ul>
-                  <div class="dropdown nav-div3">
+                  <div class="dropdown">
                     <button
                       className="btn dropdown-toggle"
                       type="button"
@@ -157,17 +157,12 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to="/iphone">
+                <Link className="nav-link" to="/store">
                   Iphone
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to="/ipad">
-                  Ipad
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link disabled" to="/mackbook">
+                <Link className="nav-link" to="/store">
                   Mackbook
                 </Link>
               </li>

@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../ContextApi/Cart";
 import { toast } from "react-toastify";
 import { prices } from "./../Utilies/Prices";
+import Carousel from "react-bootstrap/Carousel";
 import "./Style.css";
 import Image1 from "../Assets/Image1.png";
 import Image2 from "../Assets/Image2.png";
@@ -123,14 +124,17 @@ function Home() {
   };
   return (
     <>
+    <div className="home-page">
+      <div className="row" style={{width:"100%"}}>
       <div className="homeImageSlider">
         <ImageSlider images={[Image1, Image2, Image3]} />
       </div>
-      <div className="bestSeller-heading">BEST SELLER</div>
-      <div className="container d-flex">
+      </div>
+      <div className="row" style={{width:"100%"}}>
         <div className="col-md-3">
-          <h1>Filter By Category</h1>
-          <div className="container d-flex flex-column">
+          <h3 className="text-center mt-5">Filter By Category</h3>
+          <div className="d-flex flex-column">
+            <div className="row" style={{marginLeft:"10%"}}>
             {category?.map((c) => (
               <Checkbox
                 key={c._id}
@@ -139,9 +143,11 @@ function Home() {
                 <span className="productCategoryName">{c.name}</span>
               </Checkbox>
             ))}
+            </div>
           </div>
-          <h1 className="TextMiddle">Filter By Prices</h1>
-          <div className="container d-flex flex-column">
+          <h3 className="text-center mt-4">Filter By Price</h3>
+          <div className="d-flex flex-column">
+            <div className="row" style={{marginLeft:"10%"}}>
             <Radio.Group onChange={(e) => setRadio(e.target.value)}>
               {prices.map((p) => (
                 <div key={p._id}>
@@ -149,18 +155,19 @@ function Home() {
                 </div>
               ))}
             </Radio.Group>
+            </div>
           </div>
           <button
-            className="FilterResetBtn"
+            className="btn btn-primary mt-4"
             onClick={() => window.location.reload()}
           >
             Reset Filters
           </button>
         </div>
         <div className="col-md-9">
-          <h1>All Products</h1>
-          <div className="col-md-12 d-flex flex-wrap">
-            {product.map((prod) => (
+          <h1 className="text-center">All Products</h1>
+          <div className="d-flex flex-wrap" style={{justifyContent:"center"}}>
+          {product.map((prod) => (
               <div className="ProductCart" key={prod._id}>
                 <img
                   className="ProductImage"
@@ -190,10 +197,10 @@ function Home() {
               </div>
             ))}
           </div>
-          <div className="container">
-            {product && product.length < total && (
+          <div className="row mt-4" style={{width:"100%"}}>
+          {product && product.length < total && (
               <button
-                className="loadingBtn"
+                className="btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();
                   setPage(page + 1);
@@ -205,7 +212,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="home-div1 box">
+      <div className="row d-flex border home-custom1" style={{width:"100%",height:"600px",marginTop:"140px"}}>
+        <div className="home-div1 box">
         <div className="home-div2">
           <h1>iPhone 6 Plus</h1>
           <h2>Performance and design. Taken right to the edge.</h2>
@@ -214,42 +222,10 @@ function Home() {
         <div className="home-div3">
           <img src={Image2} className="home-img-extra" alt="image" />
         </div>
-      </div>
-      <div className="container box">
-        <div className="containerH1">
-          <div className="h1-imageBox">
-            <img src={Shipping} alt="" />
-          </div>
-          <div className="h1-textBox">FREE SHIPPING</div>
-          <div className="h1-paraBox">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor minim veniam, quis nostrud reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur
-          </div>
-        </div>
-        <div className="containerH1">
-          <div className="h1-imageBox">
-            <img src={Refund} alt="" />
-          </div>
-          <div className="h1-textBox">100% REFUND</div>
-          <div className="h1-paraBox">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor minim veniam, quis nostrud reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur
-          </div>
-        </div>
-        <div className="containerH1">
-          <div className="h1-imageBox">
-            <img src={Support} alt="" />
-          </div>
-          <div className="h1-textBox">SUPPORT 24/7</div>
-          <div className="h1-paraBox">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor minim veniam, quis nostrud reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur
-          </div>
         </div>
       </div>
+    </div>
+      
     </>
   );
 }

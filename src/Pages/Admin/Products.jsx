@@ -28,29 +28,30 @@ const Products = () => {
   }, []);
   return (
     <>
-      <div className="container">
-        <div className="col-md-4">
+        <div className="row">
+        <div className="col-md-3">
           <AdminMenu />
         </div>
-        <div className="col-md-6">
-          <h1 style={{ textAlign: "center", fontSize: "22px" }}>
+        <div className="col-md-9">
+          <h1 className="text-center">
             All Products
           </h1>
+          <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center"}}>
           {products.map((showProduct) => (
             <Link
               style={{ textDecoration: "none" }}
               to={`/dashboard/admin/product/${showProduct.slug}`}
               key={showProduct.id}
             >
-              <div class="row d-flex border m-1">
-                <div style={{ width: "180px" }}>
+                <div class="cart m-2 border" style={{width:"18rem"}}>
                   <img
                     src={showProduct.image}
-                    style={{ width: "180px" }}
+                    className="cart-img-top"
+                    style={{width:"250px"}}
                     alt="Product Image"
                   />
-                </div>
-                <div style={{ width: "450px" }}>
+                
+                <div className="cart-body">
                   <h3 class="cartItem-name">{showProduct.name}</h3>
                   <div class="cartItem-rating">
                     <img
@@ -66,11 +67,12 @@ const Products = () => {
                     <span class="cartItem-price">₹{showProduct.price}</span>
                   </div>
                 </div>
-              </div>
+                </div>
             </Link>
           ))}
+          </div>
         </div>
-      </div>
+        </div>
     </>
   );
 };
