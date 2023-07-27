@@ -157,17 +157,17 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to="/iphone">
+                <Link className="nav-link " to="/iphone">
                   Iphone
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to="/ipad">
+                <Link className="nav-link " to="/ipad">
                   Ipad
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to="/mackbook">
+                <Link className="nav-link " to="/mackbook">
                   Mackbook
                 </Link>
               </li>
