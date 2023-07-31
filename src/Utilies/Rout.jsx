@@ -24,6 +24,7 @@ import Products from './../Pages/Admin/Products';
 import Users from './../Pages/Admin/Users';
 import PageNotFound from "./PageNotFound";
 import Footer from "../Components/Footer";
+import AdminOrders from "../Pages/Admin/AdminOrders";
 
 function Rout() {
   return (
@@ -53,6 +54,7 @@ function Rout() {
           <Route path="admin/product/:slug" element={<UpdateProduct />} />
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
+          <Route path="admin/orders" element={<AdminOrders />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
